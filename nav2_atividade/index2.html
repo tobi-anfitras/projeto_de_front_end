@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site 2 — Menu Lateral Esquerdo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Epilogue:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div id="app">
+        <!-- LAYOUT PRINCIPAL -->
+        <div class="shell">
+            <!-- SIDEBAR ESQUERDA FIXA -->
+            <aside class="sidebar">
+                <div class="sidebar-inner">
+                    <div class="brand">
+                        <span class="brand-dot"></span>
+                        <span class="brand-name">VOLKS</span>
+                    </div>
+                    <nav class="side-nav">
+                        <ul>
+                            <li><a href="#" class="nav-link active " data-page="page-home"><span class="nav-num">01</span>Início</a></li>
+                            <li><a href="#" class="nav-link " data-page="page-sobre"><span class="nav-num">02</span>Sobre</a></li>
+                            <li><a href="#" class="nav-link " data-page="page-servicos"><span class="nav-num">03</span>Serviços</a></li>
+                            <li><a href="#" class="nav-link " data-page="page-contato"><span class="nav-num">04</span>Contato</a></li>
+                        </ul>
+                    </nav>
+                    <div class="sidebar-footer">
+                        <p>© 2026<br>Volks Studio</p>
+                    </div>
+                </div>
+               
+            </aside>
+
+            <!-- CONTEÚDO PRINCIPAL -->
+            <main class="content-area">
+
+                <!-- PÁGINA INICIAL -->
+                <div class="page active" id="page-home">
+                    <section class="home-hero">
+                        <div class="hero-label">Agência Criativa</div>
+                        <h1>Transformamos ideias em experiências <em>memoráveis</em></h1>
+                        <p>Somos especialistas em branding estratégico, design digital e comunicação visual. Trabalhamos com marcas que querem deixar uma marca.</p>
+                        <div class="hero-actions">
+                            <button class="btn" data-page="page-servicos">Ver Serviços</button>
+                            <button class="btn-ghost" data-page="page-sobre">Nossa História</button>
+                        </div>
+                    </section>
+
+                    <section class="home-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">◈</div>
+                            <h3>Estratégia de Marca</h3>
+                            <p>Posicionamento, arquitetura de marca e direcionamento criativo para construir identidades consistentes e relevantes.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">◎</div>
+                            <h3>Design Digital</h3>
+                            <p>Interfaces responsivas, sistemas de design e prototipagem interativa para produtos digitais de alto impacto.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">◉</div>
+                            <h3>Motion & Video</h3>
+                            <p>Animações, vídeos institucionais e conteúdo audiovisual que traduzem a personalidade da sua marca em movimento.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">◌</div>
+                            <h3>Conteúdo & Copy</h3>
+                            <p>Redação criativa e estratégica para canais digitais, campanhas e materiais institucionais com tom e voz únicos.</p>
+                        </div>
+                    </section>
+
+                    <section class="home-cta">
+                        <h2>Pronto para começar algo novo?</h2>
+                        <button class="btn" data-page="page-contato">Fale Conosco</button>
+                    </section>
+                </div>
+
+                <!-- PÁGINA SOBRE -->
+                <div class="page" id="page-sobre">
+                    <div class="inner-header">
+                        <div class="breadcrumb"><span>Volks</span> / Sobre</div>
+                        <h2>Nossa História</h2>
+                    </div>
+                    <div class="inner-body">
+                        <p class="lead">Fundada em 2017 por um grupo de criativos apaixonados por comunicação, a Volks Studio cresceu de um pequeno coletivo para uma agência completa com projetos em todo o Brasil.</p>
+                        <p>Acreditamos que o bom design não é apenas estético — é funcional, estratégico e humano. Cada projeto começa com uma escuta profunda das necessidades do cliente e termina com soluções que geram resultado real.</p>
+                        <p>Nossa equipe multidisciplinar reúne designers, estrategistas, redatores e desenvolvedores unidos por uma missão comum: criar trabalho que envergonha o medíocre e inspira o extraordinário.</p>
+                        <div class="team-grid">
+                            <div class="team-card"><div class="team-avatar av1"></div><strong>Ana Lima</strong><span>Diretora Criativa</span></div>
+                            <div class="team-card"><div class="team-avatar av2"></div><strong>Bruno Souza</strong><span>Head de Estratégia</span></div>
+                            <div class="team-card"><div class="team-avatar av3"></div><strong>Carla Motta</strong><span>Líder de Design</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PÁGINA SERVIÇOS -->
+                <div class="page" id="page-servicos">
+                    <div class="inner-header">
+                        <div class="breadcrumb"><span>Volks</span> / Serviços</div>
+                        <h2>O que fazemos</h2>
+                    </div>
+                    <div class="inner-body">
+                        <p class="lead">Oferecemos uma gama completa de serviços criativos e estratégicos para marcas que buscam se destacar no mercado.</p>
+                        <div class="service-list">
+                            <div class="service-row">
+                                <div class="service-num">01</div>
+                                <div>
+                                    <h4>Branding Completo</h4>
+                                    <p>Pesquisa, posicionamento, identidade visual, manual de marca e implementação em todos os pontos de contato.</p>
+                                </div>
+                            </div>
+                            <div class="service-row">
+                                <div class="service-num">02</div>
+                                <div>
+                                    <h4>UI/UX Design</h4>
+                                    <p>Wireframes, prototipagem, testes de usabilidade e design final para aplicativos e plataformas web.</p>
+                                </div>
+                            </div>
+                            <div class="service-row">
+                                <div class="service-num">03</div>
+                                <div>
+                                    <h4>Campanhas Digitais</h4>
+                                    <p>Conceito criativo, produção de peças e gestão de campanhas para redes sociais e mídia paga.</p>
+                                </div>
+                            </div>
+                            <div class="service-row">
+                                <div class="service-num">04</div>
+                                <div>
+                                    <h4>Consultoria de Marca</h4>
+                                    <p>Diagnóstico, auditoria de marca e roadmap estratégico para reposicionamento e crescimento.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PÁGINA CONTATO -->
+                <div class="page" id="page-contato">
+                    <div class="inner-header">
+                        <div class="breadcrumb"><span>Volks</span> / Contato</div>
+                        <h2>Fale com a gente</h2>
+                    </div>
+                    <div class="inner-body">
+                        <p class="lead">Adoramos conhecer novos projetos e desafios. Entre em contato e vamos marcar uma conversa sem compromisso.</p>
+                        <div class="contact-grid">
+                            <div class="contact-block"><div class="contact-icon">✉</div><strong>E-mail</strong><span>ola@volksstudio.com.br</span></div>
+                            <div class="contact-block"><div class="contact-icon">☎</div><strong>Telefone</strong><span>(47) 98888-1234</span></div>
+                            <div class="contact-block"><div class="contact-icon">◎</div><strong>Instagram</strong><span>@volksstudio</span></div>
+                            <div class="contact-block"><div class="contact-icon">⊕</div><strong>Endereço</strong><span>Joinville · SC</span></div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="nav2.js"></script>
+</body>
+</html>
