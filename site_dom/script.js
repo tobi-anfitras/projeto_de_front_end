@@ -22,5 +22,5 @@ const cadastrar = (event) =>{
 };
 //mapeamento do DOM
 
-document.getElementById("loginForm")?.addEventListener(`submit ${login}`)
-document.getElementById("cadform")?.addEventListener(`submit ${cadastrar}`)
+document.getElementById("loginForm")?.addEventListener(`submit ${login}`);
+document.getElementById("cadform")?.addEventListener(`submit ${cadastrar}`);
