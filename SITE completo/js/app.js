@@ -1,29 +1,28 @@
 const app = {
     render() {
         let prods = DB.get('produtos');
-        const busca = document.getElementById('buscaProd').Value.tolowerCase();
-        const cat = document.getElementById('filtroCat').Value;
-        const ordem = document.getElementById('filtroOrdem').Value;
+        const busca = document.getElementById('buscaProd').value.toLowerCase();
+        const cat = document.getElementById('filtroCat').value;
+        const ordem = document.getElementById('filtroOrdem').value;
 
-        prods = prods.filter(p => p.nome.tolowerCase().includes(busca) && (cat === "" || p.categoria === cat));
-        prods.sort((a,b) => ordem === 'asc' ? a.preco - b.preco : b.preco - a.preco);
+        prods = prods.filter(p => p.nome.toLowerCase().includes(busca) && (cat === "" || p.categoria === cat));
+        prods.sort((a, b) => ordem === 'asc' ? a.preco - b.preco : b.preco - a.preco);
 
-        const containner = document.getElementById('listaProdutos');
-        containner.innerHTML - prods.map(p => {
-        //calculo da media das estrelas
-        const totalNotas = p.avaliacoes.reduce((a,b) => a+b,0);
-        const media = p.avaliacoes.length > 0 ? Math.round(totalNotas / p.avaliacoes.length) : 0;
-
-        return `
-        <div class="col-md-4  col-lg-3">
-            <div class = "card h-100 card-prod shadow-sm">
-                <div class="card-body d-flex flex-colun">
-                <div class="d-flex justify-content-between">
-                    <small class="text-muted">${p.categoria}></small>
-                    <small class="${p.estoque}> <= 3 ? 'text-danger fw-bold' : 'text-secondary'}">
-                    Estoque: ${p.estoque}</small>
-                    </div>
-                    <h6 class="fw-bold my-1">${p.nome}</h6>
+        const container = document.getElementById('listaProdutos');
+        container.innerHTML = prods.map(p => {
+            // Cálculo da média de estrelas
+            const totalNotas = p.avaliacoes.reduce((a, b) => a + b, 0);
+            const media = p.avaliacoes.length > 0 ? Math.round(totalNotas / p.avaliacoes.length) : 0;
+            
+            return `
+            <div class="col-md-4 col-lg-3">
+                <div class="card h-100 card-prod shadow-sm">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between">
+                            <small class="text-muted">${p.categoria}</small>
+                            <small class="${p.estoque <= 3 ? 'text-danger fw-bold' : 'text-secondary'}">Estoque: ${p.estoque}</small>
+                        </div>
+                        <h6 class="fw-bold my-1">${p.nome}</h6>
                         <div class="star mb-2" onclick="app.prepararAvaliacao(${p.id})" data-bs-toggle="modal" data-bs-target="#modalAvaliar" title="Clique para avaliar">
                             ${'★'.repeat(media)}${'☆'.repeat(5 - media)} 
                             <small class="text-muted">(${p.avaliacoes.length})</small>
@@ -38,9 +37,7 @@ const app = {
                         </div>
                     </div>
                 </div>
-            </div>;
-            `
-
+            </div>`;
         }).join('');
     },
 
@@ -209,4 +206,3 @@ document.addEventListener('DOMContentLoaded', () => {
     app.render();
     app.updateCartCount();
 });
-
